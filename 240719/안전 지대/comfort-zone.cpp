@@ -43,7 +43,7 @@ int main() {
       cin >> town[i][j];
 
   int maxSafeArea = 0;
-  int maxK = 0;
+  int maxK = 1;
 
   for (int k = 1; k <= 100; k++) {
     vector<vector<bool>> vis(N, vector<bool>(M, false));
