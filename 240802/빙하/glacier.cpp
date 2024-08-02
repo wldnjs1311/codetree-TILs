@@ -70,7 +70,7 @@ int main() {
 
   for (int i = 0; i < N; i++) {
     for (int j = 0; j < M; j++) {
-      if (vis[i][j] > MaxTime) {
+      if (Map[i][j]==1 && vis[i][j] > MaxTime) {
         MaxTime = vis[i][j];
         MaxCnt = 1;
       }
