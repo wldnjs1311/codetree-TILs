@@ -100,7 +100,7 @@ void ChooseRock(int m, int cur, queue<pair<int, int>> q)
   }
 
   for (int i = cur; i < rocks.size(); i++) {
-    Remove[i] = rocks[i];
+    Remove[cur] = rocks[i];
     ChooseRock(m, cur + 1, q);
   }
 }
