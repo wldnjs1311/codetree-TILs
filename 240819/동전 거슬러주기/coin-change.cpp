@@ -42,6 +42,6 @@ int main() {
     }
   }
 
-  if (dp[m] == 0) cout << -1;
+  if (dp[m] == INT_MAX) cout << -1;
   else cout << dp[m];
 }
