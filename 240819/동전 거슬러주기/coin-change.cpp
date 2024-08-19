@@ -31,17 +31,17 @@ int main() {
     cin >> coins[i];
 
   sort(coins.begin(), coins.end(), greater<>());
-  vector<int> dp(m, INT_MAX);
+  vector<int> dp(m+1, INT_MAX);
 
   for (int coin : coins) dp[coin] = 1;
 
-  for (int i = 0; i < m; i++) { //i는 금액
-    for (int j = 0; j < n;j++) { //j는 동전의 종류
-      if (i - coins[j] < 0 || dp[i-coins[j]] == INT_MAX) continue;
+  for (int i = 0; i <= m; i++) { //i는 금액
+    for (int j = 0; j < n; j++) { //j는 동전의 종류
+      if (i - coins[j] < 0 || dp[i - coins[j]] == INT_MAX) continue;
       dp[i] = min(dp[i], dp[i - coins[j]] + 1);
     }
   }
 
-  if (dp[m - 1] == 0) cout << -1;
-  else cout << dp[m - 1];
+  if (dp[m] == 0) cout << -1;
+  else cout << dp[m];
 }
