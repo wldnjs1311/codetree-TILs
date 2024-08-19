@@ -31,7 +31,7 @@ int main() {
   for (int i = 0; i < n; i++)
     cin >> nums[i];
 
-  int maxLength = 0;
+  int maxLength = 1;
   for (int i = 1; i < n; i++) {
     for (int j = i - 1; j >= 0; j--) {
       if (nums[i] > nums[j] && dp[i] < nums[j] + 1) {
