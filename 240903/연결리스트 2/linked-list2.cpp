@@ -45,15 +45,21 @@ public:
   }
 
   void pickNode(int i) {
-    if (arr[i]->preNode != nullptr) {
-      arr[i]->preNode->nextNode = nullptr;
-      arr[i]->preNode = nullptr;
+    if (arr[i]->preNode != nullptr && arr[i]->nextNode != nullptr) {
+      arr[i]->preNode->nextNode = arr[i]->nextNode;
+      arr[i]->nextNode->preNode = arr[i]->preNode;
     }
 
-    if (arr[i]->nextNode != nullptr) {
+    else if (arr[i]->nextNode != nullptr) {
       arr[i]->nextNode->preNode = nullptr;
-      arr[i]->nextNode = nullptr;
     }
+
+    else if (arr[i]->preNode != nullptr) {
+      arr[i]->preNode->nextNode = nullptr;
+    }
+
+    arr[i]->nextNode = nullptr;
+    arr[i]->preNode = nullptr;
   }
 
   void insert_front(int i, int j) {
