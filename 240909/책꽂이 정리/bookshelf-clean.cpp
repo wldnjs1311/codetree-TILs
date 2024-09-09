@@ -73,7 +73,7 @@ int main()
 	for (int i = 1; i <= K; i++)
 	{
 		list<int>::iterator iter = Mylist[i].begin();
-		cout << Mylist[i].size() << ' ';
+		cout << Mylist[i].size() + 1 << ' ';
 		for (iter ; iter != Mylist[i].end(); ++iter)
 		{
 			cout << (*iter) << ' ';
