@@ -10,7 +10,7 @@ int main()
 	int N, M;
 	cin >> N >> M;
 
-	priority_queue<long long> pq;
+	priority_queue<int> pq;
 
 	for (int i = 0; i < N; i++)
 	{
