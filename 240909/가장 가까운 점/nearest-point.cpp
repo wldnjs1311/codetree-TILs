@@ -13,7 +13,7 @@ struct cmp
 		int disA = abs(a.first) + abs(a.second);
 		int disB = abs(b.first) + abs(b.second);
 
-		if (disA == disB) return a.second > b.second;
+		if (disA == disB) return a.second < b.second;
 		return disA > disB;
 	}
 };
