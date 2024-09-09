@@ -9,8 +9,12 @@ using namespace std;
 struct cmp
 {
 	bool operator() (pair<int,int>& a, pair<int,int>& b)
-	{
-		return (abs(a.first) + abs(a.second)) > (abs(b.first) + abs(b.second));
+	{	
+		int disA = abs(a.first) + abs(a.second);
+		int disB = abs(b.first) + abs(b.second);
+
+		if (disA == disB) return a.second > b.second;
+		return disA > disB;
 	}
 };
 
