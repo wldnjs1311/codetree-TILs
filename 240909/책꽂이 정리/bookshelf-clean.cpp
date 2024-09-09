@@ -6,11 +6,13 @@
 
 using namespace std;
 
+int N, K;
+
+
 int main()
 {
 	ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 
-	int N, K;
 	cin >> N >> K;
 
 	vector<list<int>> Mylist(K + 1);
